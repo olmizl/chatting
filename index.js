@@ -27,13 +27,13 @@ io.on("connection", (socket) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("hello node");
+  res.sendFile(path.join(__dirname, "/public/html/chatting.html"));
 });
 
-app.get("/chatting", (req, res) => {
-  //res.send("채팅룸"); //텍스트만 나옴
-  res.sendFile(path.join(__dirname, "/public/html/chatting.html")); //html이 켜짐
-});
+// app.get("/chatting", (req, res) => {
+//   //res.send("채팅룸"); //텍스트만 나옴
+//   res.sendFile(path.join(__dirname, "/public/html/chatting.html")); //html이 켜짐
+// });
 
 server.listen(PORT, () => {
   console.log(`${PORT}에서 서버 대기중`);
