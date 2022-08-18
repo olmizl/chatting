@@ -102,25 +102,14 @@
           }
           const chattingItem = {
             nickName: $("#nickName").val(),
-            msg: $(".sendBox #msg").val().replaceAll("\n", "<br>"),
+            // msg: $(".sendBox #msg").val().replaceAll("\n", "<br>"),
+            msg: $(".sendBox #msg").val(),
           };
-
           socket.emit("chatting", chattingItem);
           $("#msg").val("");
 
           let content = $("textarea").text();
           console.log(content);
-
-          if (content.length == 0 || content == "") {
-            // console.log("0자");
-          } else {
-            // console.log(content.length + "자");
-          }
-
-          if (content.length > 10) {
-            $(this).val($(this).val().substring(0, 10));
-            // console.log("글자수 제한걸림");
-          }
         }
       }
 

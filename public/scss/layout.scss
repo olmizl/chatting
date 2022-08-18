@@ -93,7 +93,7 @@ a {
             padding: 10px;
             margin-right: 10px;
             word-break: normal;
-            // width: 40vw;
+            white-space: pre; //눈에 보이는대로 출력해줌
           }
           .time {
             font-size: 12px;
